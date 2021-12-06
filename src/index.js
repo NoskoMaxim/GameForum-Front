@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import UserForum from './forum/UserForum';
+import PostForum from './forum/PostForum';
+
+export const Context = createContext(null)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Context.Provider value={{
+        user: new UserForum(),
+        posts: new PostForum(),
+    }}>
+        <React.StrictMode>
+            <App/>
+        </React.StrictMode>
+    </Context.Provider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
