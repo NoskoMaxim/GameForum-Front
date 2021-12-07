@@ -1,14 +1,15 @@
 import React from 'react';
-import {Dropdown, Form, Modal} from "react-bootstrap";
+import {Modal, ModalTitle} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 const DeletePost = ({show, handleClose}) => {
     return (
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} centered={true}>
             <Modal.Header closeButton>
                 <Modal.Title>Delete post</Modal.Title>
             </Modal.Header>
             <Modal.Body>
+                <ModalTitle>Delete this post?</ModalTitle>
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

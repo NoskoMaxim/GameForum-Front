@@ -14,8 +14,9 @@ import {useNavigate} from "react-router-dom";
 const ForumBar = observer(() => {
     const {user} = useContext(Context)
     const navigate = useNavigate();
+
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar  bg="black" expand="lg" >
             <Container>
                 <Navbar.Brand style={{color: 'white'}} href={FORUM_ROUTE}>GameForum</Navbar.Brand>
                 <Nav
@@ -45,14 +46,15 @@ const ForumBar = observer(() => {
 
                 {user.isAuth ?
                     <Nav className="ml-auto">
-                        {user.isAdmin &&
+                        {user.user.userRole &&
                             <Button
                                 variant={"outline-warning"}
                                 className="me-2"
                                 onClick={() => navigate(SETTING_ROUTE)}
                             >
                                 Settings
-                            </Button>}
+                            </Button>
+                        }
                         <Button
                             variant={"outline-danger"}
                             onClick={() => navigate(LOGIN_ROUTE)}

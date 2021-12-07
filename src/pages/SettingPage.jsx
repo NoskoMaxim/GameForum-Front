@@ -4,14 +4,13 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import AddCategory from "../components/models/AddCategory";
 import DeleteCategory from "../components/models/DeleteCategory";
-import CreatePost from "../components/models/CreatePost";
 
 const SettingPage = () => {
     const [addCategoryVisible, setAddCategoryVisible] = useState(false);
     const [deleteCategoryVisible, setDeleteCategoryVisible] = useState(false);
 
     return (
-        <Container className={''}>
+        <Container className={'mt-3'}>
             <Row className={'d-flex'}>
                 <Col className={'d-flex justify-content-center'}>
                     <Button
@@ -32,9 +31,8 @@ const SettingPage = () => {
                     </Button>
                 </Col>
             </Row>
-            {/*<AddCategory show={addCategoryVisible} handleClose={() => setAddCategoryVisible(false)}/>*/}
+            <AddCategory show={addCategoryVisible} handleClose={() => setAddCategoryVisible(false)}/>
             <DeleteCategory show={deleteCategoryVisible} handleClose={() => setDeleteCategoryVisible(false)}/>
-            <CreatePost show={addCategoryVisible} handleClose={() => setAddCategoryVisible(false)}/>
         </Container>
     );
 };

@@ -13,23 +13,25 @@ export default function AuthPage() {
             className={"d-flex justify-content-center align-items-center"}
             style={{height: window.innerHeight - 54}}
         >
-            <Card style={{width: 600}} className="p-5">
+            <Card style={{width: 600}} className="p-5 border-dark border-2">
                 <h2 className={"m-auto"}>{isLogin ? 'Authorization' : 'Registration'}</h2>
                 <Form className="d-flex flex-column">
                     <Form.Control
-                        className="mt-3"
+                        className="mt-3 border-dark"
                         placeholder="Enter username or email"
+                        type={'username'}
                     />
                     <Form.Control
-                        className="mt-3"
+                        className="mt-3 border-dark"
                         placeholder="Enter password"
+                        type={'password'}
                     />
                     <Button
                         className={"mt-3"}
                         variant="outline-success"
                     >
                         {isLogin ? 'Log In' : 'Registration'
-                    }
+                        }
                     </Button>
                     {isLogin ?
                         <NavLink className={"mt-3"} to={REGISTRATION_ROUTE}>Register now</NavLink>

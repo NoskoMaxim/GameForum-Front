@@ -4087,6 +4087,11 @@
   "resolved" "https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.6.tgz"
   "version" "1.0.6"
 
+"dark-mode-switch@^1.0.0":
+  "integrity" "sha512-wRoqYGmph7mwRbPcSNRR6DpRQe5wOK0lG6O3Hz7nIWWDyLAHSqje7PUI6c/acOYACiSPHc7sqysn57GSuklb6w=="
+  "resolved" "https://registry.npmjs.org/dark-mode-switch/-/dark-mode-switch-1.0.0.tgz"
+  "version" "1.0.0"
+
 "dashdash@^1.12.0":
   "integrity" "sha1-hTz6D3y+L+1d4gMmuN1YEDX24vA="
   "resolved" "https://registry.npmjs.org/dashdash/-/dashdash-1.14.1.tgz"

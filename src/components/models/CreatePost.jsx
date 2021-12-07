@@ -7,26 +7,27 @@ const CreatePost = ({show, handleClose}) => {
     const {posts} = useContext(Context)
 
     return (
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Create post</Modal.Title>
+        <Modal show={show} onHide={handleClose} size={'lg'} centered={true}>
+            <Modal.Header closeButton className={'bg-dark text-white'}>
+                <Modal.Title >Create post</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form>
                     <Form.Control
-                        className={'mt-2'}
+                        className={'mt-2 border-dark'}
                         placeholder={"Enter a title"}
                     />
                     <Form.Control
-                        className={'mt-2'}
+                        className={'mt-2 border-dark col-form-label'}
                         placeholder={"Enter a content"}
+
                     />
                     <Form.Control
-                        className={'mt-2'}
+                        className={'mt-2 border-dark'}
                         type={'file'}
                     />
                     <Dropdown className={'mt-2'}>
-                        <Dropdown.Toggle>
+                        <Dropdown.Toggle className={'bg-dark border-dark'}>
                             Select a category
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
@@ -37,10 +38,9 @@ const CreatePost = ({show, handleClose}) => {
                             )}
                         </Dropdown.Menu>
                     </Dropdown>
-                    <hr/>
                 </Form>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer className={'bg-dark'}>
                 <Button variant="danger" onClick={handleClose}>
                     Close
                 </Button>

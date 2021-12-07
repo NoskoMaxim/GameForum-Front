@@ -4,18 +4,19 @@ import Button from "react-bootstrap/Button";
 
 const DeleteCategory = ({show, handleClose}) => {
     return (
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
+        <Modal show={show} onHide={handleClose} centered={true}>
+            <Modal.Header closeButton className={'bg-dark text-white'}>
                 <Modal.Title>Delete category</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form>
                     <Form.Control
                         placeholder={"Enter a category"}
+                        className={'border-dark'}
                     />
                 </Form>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer className={'bg-dark'}>
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Context } from "../index";
-import {adminRoutes, authRoutes, publicRoutes, se} from "../Routes";
+import {adminRoutes, authRoutes, publicRoutes} from "../Routes";
 import { FORUM_ROUTE } from '../utils/ConstPath.js';
 
 export default function ForumRouter() {
@@ -11,7 +11,7 @@ export default function ForumRouter() {
             {user.isAuth && authRoutes.map(({ path, Component }) =>
                 <Route key={path} path={path} element={Component} exact/>
             )}
-            {user.isAdmin && adminRoutes.map(({path, Component}) =>
+            {user.user.userRole && adminRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} element={Component} exact/>
             )}
             {publicRoutes.map(({ path, Component }) =>

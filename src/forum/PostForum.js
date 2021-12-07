@@ -9,11 +9,39 @@ export default class PostForum {
             },
             {
                 id: 1,
-                category: 'yra'
+                category: 'hhohohasrdasfddfdfdf'
             },
             {
                 id: 2,
                 category: 'kek'
+            },
+            {
+                id: 3,
+                category: 'he'
+            },
+            {
+                id: 4,
+                category: 'hhohoh'
+            },
+            {
+                id: 5,
+                category: 'hhohohasr'
+            },
+            {
+                id: 6,
+                category: 'hhohohasrdas'
+            },
+            {
+                id: 7,
+                category: 'hhohohasrdasfd'
+            },
+            {
+                id: 8,
+                category: 'hhohohasrdasfddf'
+            },
+            {
+                id: 9,
+                category: 'hhohohasrdasfddfdfdf'
             }
         ]
         this._posts = [
